@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mayuri Creates - Portfolio</title>
+  <style>
+    :root {
+      --pastel-pink: #f7d9e3;
+      --pastel-blue: #d6eaff;
+      --pastel-yellow: #fff7d1;
+      --gold: #d4af37;
+      --white: #ffffff;
+      --text-dark: #333333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--text-dark);
+      line-height: 1.6;
+      position: relative;
+    }
+
+    header.hero {
+      background: linear-gradient(135deg, var(--pastel-pink), var(--pastel-yellow));
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    nav h1 {
+      font-size: 2rem;
+      color: var(--gold);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--gold);
+    }
+
+    .hero-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .btn {
+      background-color: var(--gold);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #b8912c;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      background-color: var(--pastel-blue);
+    }
+
+    .section:nth-child(even) {
+      background-color: var(--pastel-yellow);
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--gold);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 0 2rem;
+    }
+
+    .card {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .services-list {
+      max-width: 600px;
+      margin: 0 auto;
+      list-style: none;
+      padding: 0;
+    }
+
+    .services-list li {
+      margin: 0.5rem 0;
+      padding: 1rem;
+      background-color: white;
+      border-left: 5px solid var(--gold);
+    }
+
+    form#contact-form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    form input, form textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: var(--gold);
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #b8912c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--pastel-pink);
+    }
+
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--gold);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #b8912c;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      .hero-text h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <h1>Mayuri Creates</h1>
+      <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero-text">
+      <h2>Designs That Speak. Art That Feels.</h2>
+      <a href="#portfolio" class="btn">View My Work</a>
+    </section>
+  </header>
+
+  <section id="portfolio" class="section">
+    <h2>My Work</h2>
+    <div class="portfolio-grid">
+      <div class="card">Logo Design</div>
+      <div class="card">Resin Art</div>
+      <div class="card">YouTube Thumbnails</div>
+      <div class="card">Website UI</div>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Services</h2>
+    <ul class="services-list">
+      <li>Logo Design – ₹XXX</li>
+      <li>Custom Resin Art – ₹XXX</li>
+      <li>Video Editing – ₹XXX</li>
+      <li>YouTube Thumbnails – ₹XXX</li>
+      <li>Website Design – ₹XXX</li>
+    </ul>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p style="max-width: 700px; margin: auto; text-align: center;">I’m Mayuri, a multidisciplinary creator who blends resin art with modern digital design. From resin to resolution – I turn creativity into connection.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mayuri Creates. All rights reserved.</p>
+  </footer>
+
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Message Sent! I will get back to you soon.');
+      this.reset();
+    });
+
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    window.onscroll = function() {
+      scrollTopBtn.style.display = (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? 'block' : 'none';
+    };
+
+    scrollTopBtn.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+</body>
+</html>
